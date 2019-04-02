@@ -1,0 +1,39 @@
+package com.gelrestwebservices.restfulwebservices;
+
+public class HelloWorldBean {
+	
+	private String message;
+
+	public HelloWorldBean(String message) {
+		// TODO Auto-generated constructor stub
+		this.message = message;
+	}
+	
+	
+	//set getter
+	
+
+
+
+	//generate setters
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+	public String getMessage() {
+		return message;
+	}
+
+
+	// generate toString()
+	@Override
+	public String toString() {
+		return "HelloWorldBean [message=" + message + "]";
+	}
+	
+	
+	
+	
+	
+	
+}

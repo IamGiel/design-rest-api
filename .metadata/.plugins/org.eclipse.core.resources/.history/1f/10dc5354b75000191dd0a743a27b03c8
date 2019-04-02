@@ -1,0 +1,7 @@
+package com.gelrestwebservices.restfulwebservices;
+
+
+
+public class HelloWorldBean(String message) {
+		// TODO Auto-generated constructor stub
+	}
