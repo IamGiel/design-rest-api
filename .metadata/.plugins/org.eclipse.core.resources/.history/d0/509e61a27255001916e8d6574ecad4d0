@@ -1,0 +1,77 @@
+package com.beroe.live.datacleansing.service.impl;
+
+import com.beroe.live.datacleansing.service.DataCleansingService;
+import com.beroe.live.datacleansing.domain.DataCleansing;
+import com.beroe.live.datacleansing.repository.DataCleansingRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+
+import java.util.Optional;
+/**
+ * Service Implementation for managing DataCleansing.
+ */
+@Service
+public class DataCleansingServiceImpl implements DataCleansingService {
+
+    private final Logger log = LoggerFactory.getLogger(DataCleansingServiceImpl.class);
+
+    private final DataCleansingRepository dataCleansingRepository;
+
+    public DataCleansingServiceImpl(DataCleansingRepository dataCleansingRepository) {
+        this.dataCleansingRepository = dataCleansingRepository;
+    }
+
+    /**
+     * Save a dataCleansing.
+     *
+     * @param dataCleansing the entity to save
+     * @return the persisted entity
+     */
+    @Override
+    public DataCleansing save(DataCleansing dataCleansing) {
+        log.debug("Request to save DataCleansing : {}", dataCleansing);        
+        return dataCleansingRepository.save(dataCleansing);
+    }
+
+    /**
+     * Get all the dataCleansings.
+     *
+     * @param pageable the pagination information
+     * @return the list of entities
+     */
+    @Override
+    public Page<DataCleansing> findAll(Pageable pageable) {
+        log.debug("Request to get all DataCleansings");
+        log.debug(">>>>>>> Gel findAll");
+        return dataCleansingRepository.findAll(pageable);
+    }
+
+
+    /**
+     * Get one dataCleansing by id.
+     *
+     * @param id the id of the entity
+     * @return the entity
+     */
+    @Override
+    public Optional<DataCleansing> findOne(String id) {
+        log.debug("Request to get DataCleansing : {}", id);
+        return dataCleansingRepository.findById(id);
+    }
+
+    /**
+     * Delete the dataCleansing by id.
+     *
+     * @param id the id of the entity
+     */
+    @Override
+    public void delete(String id) {
+        log.debug("Request to delete DataCleansing : {}", id);
+        dataCleansingRepository.deleteById(id);
+    }
+}
