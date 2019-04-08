@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="data-cleanse-mongodb">
+        <wb-resource deploy-path="/" source-path="/target/www"/>
+        <property name="context-root" value="data-cleanse-mongodb"/>
+        <property name="java-output-path" value="/data-cleanse-mongodb/target/classes"/>
+    </wb-module>
+</project-modules>

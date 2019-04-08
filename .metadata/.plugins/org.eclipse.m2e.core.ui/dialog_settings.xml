@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/alpha.gieldeasis/Desktop/datacleanseraleigh"/>
 			<item value="/Users/alpha.gieldeasis/Desktop/src/gel-springboot-basics"/>
 			<item value="/Users/alpha.gieldeasis/Desktop/rest/restful-web-services"/>
 		</list>

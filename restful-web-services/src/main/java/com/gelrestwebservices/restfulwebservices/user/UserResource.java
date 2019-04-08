@@ -3,7 +3,6 @@ package com.gelrestwebservices.restfulwebservices.user;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.*;
 import java.net.URI;
-import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.List;
 
 import javax.validation.Valid;

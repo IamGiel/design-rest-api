@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="com.gelrestwebservices.restfulwebservices.HelloWorldBean"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="com.gelrestwebservices.restfulwebservices.user.UserDaoService"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -40,5 +39,12 @@
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.util.descriptor.LocalResolver"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ResourceBundleMessageSource"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.integration.core.MessageSource"/>
+<fullyQualifiedTypeName name="org.springframework.context.MessageSource"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestHeader"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="org.springframework.context.i18n.LocaleContextHolder"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver"/>
 </qualifiedTypeNameHistroy>

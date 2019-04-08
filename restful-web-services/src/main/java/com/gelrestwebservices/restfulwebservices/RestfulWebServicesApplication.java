@@ -1,23 +1,21 @@
 package com.gelrestwebservices.restfulwebservices;
 
 import java.util.Locale;
-import java.util.TimeZone;
 
-import org.apache.tomcat.util.descriptor.LocalResolver;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.support.ResourceBundleMessageSource;
-import org.springframework.lang.Nullable;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 @SpringBootApplication
+//@ComponentScan("com.gelsrestwebservices")
 public class RestfulWebServicesApplication {
 	
-	private TimeZone defaultTimeZone;
+	// private TimeZone defaultTimeZone;
 
 	public static void main(String[] args) {
+		System.out.println(">>>>>> Gels " + args);
 		SpringApplication.run(RestfulWebServicesApplication.class, args);
 	}
 	
@@ -27,14 +25,7 @@ public class RestfulWebServicesApplication {
 		localeResolver.setDefaultLocale(Locale.US);
 		return localeResolver;
 	}
-	
-	@Bean
-	public ResourceBundleMessageSource messageSource() {
-		
-		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-		messageSource.setBasename("messages");
-		return messageSource;
-	}
+	//remove resource ResourceBundleMessageSource code block
 	
 
 }
