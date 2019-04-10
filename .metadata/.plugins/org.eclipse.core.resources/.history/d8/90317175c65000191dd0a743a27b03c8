@@ -1,5 +1,0 @@
-package com.gelrestwebservices.restfulwebservices.user;
-
-public class UserDaoService {
-
-}
