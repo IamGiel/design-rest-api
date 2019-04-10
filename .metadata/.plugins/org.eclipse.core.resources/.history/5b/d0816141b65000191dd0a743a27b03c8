@@ -1,7 +1,0 @@
-package com.gelrestwebservices.restfulwebservices;
-
-
-
-public class HelloWorldBean {
-	this.message = message
-}

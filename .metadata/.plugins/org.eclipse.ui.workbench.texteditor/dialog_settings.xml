@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="DataCleansingServiceImpl" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="mapping"/>
 			<item value="DataCleansingServiceImpl"/>
 			<item value="&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; GEL gets data from mongo "/>
 			<item value="&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;"/>
@@ -27,6 +28,6 @@
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 		<item value="336" key="DIALOG_HEIGHT"/>
 		<item value="993" key="DIALOG_X_ORIGIN"/>
-		<item value="539" key="DIALOG_Y_ORIGIN"/>
+		<item value="465" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

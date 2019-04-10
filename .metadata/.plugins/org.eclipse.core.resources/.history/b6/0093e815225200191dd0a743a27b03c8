@@ -1,7 +1,0 @@
-package com.gelrestwebservices.restfulwebservices.user;
-
-import java.lang.Runtime.Exception;
-
-public class UserNotFoundException extends Exception {
-
-}
