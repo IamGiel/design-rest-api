@@ -4329,3 +4329,80 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2019-04-10 12:28:39,640 [Worker-347: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2019-04-10 12:28:39,641 [Worker-347: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-04-10 12:28:39,642 [Worker-347: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-10 14:48:58,981 [Worker-368: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 14:48:58,983 [Worker-368: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-10 14:48:58,987 [Worker-368: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-10 14:48:59,000 [Worker-368: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 14:48:59,000 [Worker-368: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-10 14:58:51,781 [Worker-369: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 14:58:51,782 [Worker-369: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-10 14:58:51,783 [Worker-369: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-10 14:58:51,784 [Worker-369: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 14:58:51,785 [Worker-369: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-10 15:03:41,753 [Worker-367: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:03:41,754 [Worker-367: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-10 15:03:41,755 [Worker-367: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-10 15:03:41,757 [Worker-367: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:03:41,757 [Worker-367: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-10 15:05:20,022 [Worker-367: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:05:20,023 [Worker-367: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-10 15:05:20,025 [Worker-367: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-10 15:05:20,026 [Worker-367: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:05:20,027 [Worker-367: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-10 15:08:38,334 [Worker-373: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:08:38,336 [Worker-373: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-10 15:08:38,338 [Worker-373: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-10 15:08:38,340 [Worker-373: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:08:38,340 [Worker-373: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-10 15:14:07,249 [Worker-376: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:14:07,251 [Worker-376: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-10 15:14:07,252 [Worker-376: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-10 15:14:07,256 [Worker-376: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:14:07,256 [Worker-376: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-10 15:21:53,001 [Worker-380: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:21:53,002 [Worker-380: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-10 15:21:53,007 [Worker-380: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-10 15:21:53,009 [Worker-380: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:21:53,009 [Worker-380: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-10 15:23:42,457 [Worker-382: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:23:42,458 [Worker-382: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-10 15:23:42,459 [Worker-382: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-10 15:23:42,460 [Worker-382: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:23:42,460 [Worker-382: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-10 15:25:52,534 [Worker-383: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:25:52,535 [Worker-383: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-10 15:25:52,536 [Worker-383: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-10 15:25:52,542 [Worker-383: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:25:52,542 [Worker-383: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-10 15:46:03,464 [Worker-387: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:46:03,466 [Worker-387: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-10 15:46:03,467 [Worker-387: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-10 15:46:03,469 [Worker-387: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-10 15:46:03,469 [Worker-387: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-11 11:18:50,572 [Worker-399: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jpa.inTen.Steps:jpa-in-10-steps:0.0.1-SNAPSHOT @ /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/pom.xml.
+2019-04-11 11:18:51,324 [Worker-399: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-11 11:18:51,330 [Worker-399: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-11 11:18:51,330 [Worker-399: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-11 11:18:51,332 [Worker-399: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-11 11:18:51,332 [Worker-399: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-11 11:22:11,098 [Worker-403: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jpa.inTen.Steps:jpa-in-10-steps:0.0.1-SNAPSHOT @ /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/pom.xml.
+2019-04-11 11:22:12,529 [Worker-403: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-11 11:22:12,531 [Worker-403: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-11 11:22:12,531 [Worker-403: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-11 11:22:12,533 [Worker-403: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-11 11:22:12,534 [Worker-403: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-11 11:22:14,364 [Worker-403: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-11 11:22:14,365 [Worker-403: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-11 11:22:14,381 [Worker-403: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-11 11:22:14,382 [Worker-403: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-11 11:22:14,382 [Worker-403: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-11 11:22:18,208 [Worker-402: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-11 11:22:18,208 [Worker-402: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-11 11:22:18,209 [Worker-402: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-11 11:22:18,210 [Worker-402: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-11 11:22:18,210 [Worker-402: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
+2019-04-11 11:25:54,286 [Worker-404: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-11 11:25:54,288 [Worker-404: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-04-11 11:25:54,290 [Worker-404: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-04-11 11:25:54,292 [Worker-404: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-04-11 11:25:54,292 [Worker-404: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps/src/test/resources
