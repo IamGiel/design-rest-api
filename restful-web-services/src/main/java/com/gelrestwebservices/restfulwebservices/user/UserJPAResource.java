@@ -4,6 +4,7 @@ package com.gelrestwebservices.restfulwebservices.user;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.*;
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -43,13 +44,13 @@ public class UserJPAResource {
 	//retrieveUser(int id)
 	@GetMapping("/jpa/users/{id}")
 	public Resource<User> retrieveUser(@PathVariable int id) {
-		User user = service.findOne(id);
-		
+		//User user = service.findOne(id);
+		Optional<User> user = userRepository.findById(id); //id exists or not, so return Optional
 		//throw an error if user not found
-		if(user==null)
+		if(!user.isPresent())
 			throw new UserNotFoundException("id-" + id);
 		//HATEOAS - Hypermedia As the Engine of Application State
-		Resource<User> resource = new Resource<User>(user);
+		Resource<User> resource = new Resource<User>(user.get());
 		ControllerLinkBuilder linkTo = 
 				linkTo(methodOn(this.getClass()).retrieveAllUsers());
 		
@@ -66,7 +67,7 @@ public class UserJPAResource {
 		User user = service.deleteById(id);
 		
 		//throw an error if user not found
-		if(user==null)
+		if(!(user==null))
 			throw new UserNotFoundException("id-" + id);
 	}
 	
