@@ -27,6 +27,11 @@ public class User {
 	@ApiModelProperty(notes="Birthday should be in the past")
 	private Date birthday;
 	
+	// JPA expects a default constructor 
+	protected User() {
+		
+	}
+	
 	
 	public User(Integer id, String name, Date birthday) {
 		super();
