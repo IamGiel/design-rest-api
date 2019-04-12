@@ -20,12 +20,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.gelrestwebservices.restfulwebservices.post.Post;
+import com.gelrestwebservices.restfulwebservices.post.PostRepository;
+
 @RestController
 public class UserJPAResource {
 
 	@Autowired
 	private  UserRepository  userRepository;
 	
+	@Autowired
+	private  PostRepository  postRepository;
 	
 	//GET /users
 	//retrieveAllUsers
@@ -80,6 +85,48 @@ public class UserJPAResource {
 		
 		
 		return ResponseEntity.created(location).build();
+	}
+	
+	//GET /users and their posts
+	//retrieveAllUsers and their posts
+	@GetMapping("/jpa/users/{id}/posts")
+	public List<Post> getUserPosts(@PathVariable int id) {
+		// return service.findAll();
+		 Optional<User> userOptional = userRepository.findById(id);
+		 if(!userOptional.isPresent()) {
+			 throw new UserNotFoundException("id-" + id);
+		 }
+		 
+		 return userOptional.get().getPost();
+	}
+	
+	//POST /users and their posts
+	//retrieveAllUsers and their posts
+	@PostMapping("/jpa/users/{id}/posts")
+	public ResponseEntity<Object> createUserPosts(@PathVariable int id, @RequestBody Post post) {
+
+		// return service.findAll();
+		 Optional<User> userOptional = userRepository.findById(id);
+		 if(!userOptional.isPresent()) {
+			 throw new UserNotFoundException("id-" + id);
+		 }
+		 
+		 User user = userOptional.get();
+		 
+		//map user to the post
+		post.setUser(user);
+		//saver post to database
+		postRepository.save(post);
+		 
+		//CREATED 201 SUCCESS
+		// /user/4
+		URI location = ServletUriComponentsBuilder
+		.fromCurrentRequest()
+		.path("/{id}")
+		.buildAndExpand(post.getId()).toUri();
+			
+		 
+		 return ResponseEntity.created(location).build();
 	}
 	
 	

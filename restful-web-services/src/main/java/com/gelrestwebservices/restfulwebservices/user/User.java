@@ -16,6 +16,7 @@ import org.omg.CORBA.PRIVATE_MEMBER;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties.Lettuce;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.gelrestwebservices.restfulwebservices.post.Post;
 
 import io.swagger.annotations.ApiModel;
@@ -45,12 +46,10 @@ public class User {
 	}
 	
 	@OneToMany(mappedBy="user")
-	@JsonIgnore
+	@JsonManagedReference
 	private List<Post> post;
 	
 	public void setNumberOfPost(Integer numberOfPost) {
-		numberOfPost = post.size();
-		System.out.println("this is gels num of posts >>>>>>> " + numberOfPost);
 		this.numberOfPost = numberOfPost;
 	}
 
