@@ -1,12 +1,17 @@
 package com.gelrestwebservices.restfulwebservices.user;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
+
+import com.gelrestwebservices.restfulwebservices.post.Post;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -31,8 +36,9 @@ public class User {
 	protected User() {
 		
 	}
-	
-	
+	@OneToMany(mappedBy="user")
+	private List<Post> post;
+
 	public User(Integer id, String name, Date birthday) {
 		super();
 		this.id = id;
@@ -67,6 +73,17 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", birthday=" + birthday + "]";
+	}
+	
+	
+	
+	
+	public List<Post> getPost() {
+		return post;
+	}
+
+	public void setPost(List<Post> post) {
+		this.post = post;
 	}
 
 

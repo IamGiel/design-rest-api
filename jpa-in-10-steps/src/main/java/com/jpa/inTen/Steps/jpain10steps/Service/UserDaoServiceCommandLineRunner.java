@@ -1,4 +1,4 @@
-package com.jpa.inTen.Steps.jpain10steps;
+package com.jpa.inTen.Steps.jpain10steps.Service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,3 +29,16 @@ public class UserDaoServiceCommandLineRunner implements CommandLineRunner {
 	}
 
 }
+
+//@Autowired
+//private UserRepository userRepository;
+//
+//@Override
+//public void run(String... args) throws Exception {
+//	// TODO Auto-generated method stub
+//	User user = new User("Jack", "Admin");
+//	
+//	// new user is created: User [id=1, name=Jack, role=Admin]
+//	userRepository.save(user);
+//	log.info("new user is created: " + user);
+//}

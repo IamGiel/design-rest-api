@@ -8,6 +8,7 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="swagger"/>
 			<item value="mapping"/>
 			<item value="DataCleansingServiceImpl"/>
 			<item value="&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; GEL gets data from mongo "/>
