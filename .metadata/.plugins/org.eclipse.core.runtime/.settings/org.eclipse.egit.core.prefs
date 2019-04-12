@@ -1,3 +1,4 @@
 GitRepositoriesView.GitDirectories=/Users/alpha.gieldeasis/Desktop/src/.git\:/Users/alpha.gieldeasis/Desktop/datacleanseraleigh/.git\:/Users/alpha.gieldeasis/Desktop/rest/.git\:
 GitRepositoriesView.GitDirectories.relative=/Users/alpha.gieldeasis/Desktop/src/.git\:/Users/alpha.gieldeasis/Desktop/datacleanseraleigh/.git\:.git\:
+core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
