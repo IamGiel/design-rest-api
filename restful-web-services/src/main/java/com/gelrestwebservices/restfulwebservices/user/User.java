@@ -11,6 +11,11 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import org.aspectj.weaver.ast.Var;
+import org.omg.CORBA.PRIVATE_MEMBER;
+import org.springframework.boot.autoconfigure.data.redis.RedisProperties.Lettuce;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gelrestwebservices.restfulwebservices.post.Post;
 
 import io.swagger.annotations.ApiModel;
@@ -34,12 +39,25 @@ public class User {
 	
 	private Integer numberOfPost;
 	
+	public Integer getNumberOfPost() {
+		
+		return numberOfPost;
+	}
+	
+	@OneToMany(mappedBy="user")
+	@JsonIgnore
+	private List<Post> post;
+	
+	public void setNumberOfPost(Integer numberOfPost) {
+		numberOfPost = post.size();
+		System.out.println("this is gels num of posts >>>>>>> " + numberOfPost);
+		this.numberOfPost = numberOfPost;
+	}
+
 	// JPA expects a default constructor 
 	protected User() {
 		
 	}
-	@OneToMany(mappedBy="user")
-	private List<Post> post;
 
 	public User(Integer id, String name, Date birthday) {
 		super();
@@ -83,14 +101,6 @@ public class User {
 
 	public void setPost(List<Post> post) {
 		this.post = post;
-	}
-
-	public Integer getNumberOfPost() {
-		return numberOfPost;
-	}
-
-	public void setNumberOfPost(Integer numberOfPost) {
-		this.numberOfPost = numberOfPost;
 	}
 
 
