@@ -32,6 +32,8 @@ public class User {
 	@ApiModelProperty(notes="Birthday should be in the past")
 	private Date birthday;
 	
+	private Integer numberOfPost;
+	
 	// JPA expects a default constructor 
 	protected User() {
 		
@@ -75,15 +77,20 @@ public class User {
 		return "User [id=" + id + ", name=" + name + ", birthday=" + birthday + "]";
 	}
 	
-	
-	
-	
 	public List<Post> getPost() {
 		return post;
 	}
 
 	public void setPost(List<Post> post) {
 		this.post = post;
+	}
+
+	public Integer getNumberOfPost() {
+		return numberOfPost;
+	}
+
+	public void setNumberOfPost(Integer numberOfPost) {
+		this.numberOfPost = numberOfPost;
 	}
 
 
