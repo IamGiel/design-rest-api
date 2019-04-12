@@ -22,12 +22,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 public class UserJPAResource {
-	
-	
-	
-	@Autowired
-	private  UserDaoService  service;
-	
+
 	@Autowired
 	private  UserRepository  userRepository;
 	
@@ -74,7 +69,7 @@ public class UserJPAResource {
 	//output - CREATED & Return the created URI
 	@PostMapping("/jpa/users")
 	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
-		User savedUser = service.save(user);
+		User savedUser = userRepository.save(user);
 		
 		//CREATED 201 SUCCESS
 		// /user/4

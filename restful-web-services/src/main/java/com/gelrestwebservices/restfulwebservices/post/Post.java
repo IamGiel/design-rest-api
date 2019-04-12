@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.gelrestwebservices.restfulwebservices.user.User;
 
 @Entity
@@ -17,6 +18,7 @@ public class Post {
 	private String description;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
+	@JsonBackReference
 	private User user;
 	
 	protected Post() {
