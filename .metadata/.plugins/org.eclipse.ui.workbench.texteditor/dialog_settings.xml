@@ -8,6 +8,13 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="this"/>
+			<item value="&gt;&gt;&gt;&gt;&gt;&gt;&gt; "/>
+			<item value="this is gels num of posts &gt;&gt;&gt;&gt;&gt;&gt;&gt; "/>
+			<item value="this is gel"/>
+			<item value="this is gels num of posts &gt;&gt;&gt;&gt;&gt;&gt;&gt; What is your desired price range?&#x0A;Are you available to visit us this week or this weekend?"/>
+			<item value="What is your timeframe for moving?&#x0A;What is your desired price range?&#x0A;Are you available to visit us this week or this weekend?"/>
+			<item value="create"/>
 			<item value="swagger"/>
 			<item value="mapping"/>
 			<item value="DataCleansingServiceImpl"/>
@@ -16,10 +23,6 @@
 			<item value="createDataCleansing()"/>
 			<item value="&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; This is Gel"/>
 			<item value="handlemethodargument"/>
-			<item value="validation"/>
-			<item value="validation.BindException"/>
-			<item value="valid"/>
-			<item value="create"/>
 		</list>
 		<list key="replacehistory">
 		</list>

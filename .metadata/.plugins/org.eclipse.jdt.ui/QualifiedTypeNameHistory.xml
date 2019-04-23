@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>
-<fullyQualifiedTypeName name="org.springframework.context.support.ResourceBundleMessageSource"/>
-<fullyQualifiedTypeName name="org.springframework.integration.core.MessageSource"/>
-<fullyQualifiedTypeName name="org.springframework.context.MessageSource"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestHeader"/>
-<fullyQualifiedTypeName name="java.util.Locale"/>
-<fullyQualifiedTypeName name="org.springframework.context.i18n.LocaleContextHolder"/>
-<fullyQualifiedTypeName name="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver"/>
-<fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.EnableWebMvc"/>
-<fullyQualifiedTypeName name="io.swagger.annotations.Contact"/>
-<fullyQualifiedTypeName name="springfox.documentation.service.Contact"/>
-<fullyQualifiedTypeName name="org.h2.command.dml.Set"/>
-<fullyQualifiedTypeName name="org.hibernate.mapping.Set"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
 <fullyQualifiedTypeName name="com.fasterxml.classmate.TypeResolver"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
@@ -34,7 +20,6 @@
 <fullyQualifiedTypeName name="io.swagger.annotations.ApiModelProperty"/>
 <fullyQualifiedTypeName name="filteringController.someBean"/>
 <fullyQualifiedTypeName name="filteringController.FilteringController"/>
-<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
 <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.domain.EntityScan"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.EnableJpaRepositories"/>
 <fullyQualifiedTypeName name="filteringController.SomeBean"/>
@@ -55,9 +40,24 @@
 <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
 <fullyQualifiedTypeName name="com.jpa.inTen.Steps.jpain10steps.Entity.User"/>
-<fullyQualifiedTypeName name="java.util.Optional"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="javax.persistence.FetchType"/>
+<fullyQualifiedTypeName name="com.gelrestwebservices.restfulwebservices.post.post"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.data.redis.RedisProperties.Lettuce"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.PRIVATE_MEMBER"/>
+<fullyQualifiedTypeName name="org.aspectj.weaver.ast.Var"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonManagedReference"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonBackReference"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Optional"/>
+<fullyQualifiedTypeName name="com.gelrestwebservices.restfulwebservices.post.PostRepository"/>
+<fullyQualifiedTypeName name="com.gelrestwebservices.restfulwebservices.user.User"/>
+<fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
 </qualifiedTypeNameHistroy>
