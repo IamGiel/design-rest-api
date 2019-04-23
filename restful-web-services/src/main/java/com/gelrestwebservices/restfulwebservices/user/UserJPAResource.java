@@ -96,7 +96,8 @@ public class UserJPAResource {
 		 if(!userOptional.isPresent()) {
 			 throw new UserNotFoundException("id-" + id);
 		 }
-		 
+		 List<Post> numPosts = userOptional.get().getPost();
+		 System.out.println(">>>>>>>> THIS IS GEL >>>>>>>> " + numPosts);
 		 return userOptional.get().getPost();
 	}
 	
