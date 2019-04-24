@@ -52,9 +52,22 @@ public class TodoHardCodedService {
 		return null;
 	}
 
-	// public User save(User user)
+	// update
+	public ToDo update(ToDo todoItem) {
+		if (todoItem.getId() == -1) {
+			todoItem.setId(++counter);
+			toDos.add(todoItem);
+		} else {
+			deleteById(todoItem.getId());
+			toDos.add(todoItem);
+		}
+		toDos.add(todoItem);
+		return todoItem;
+	}
+
+	// save
 	public ToDo save(@Valid ToDo todoItem) {
-		if (todoItem.getId() == 0) {
+		if (todoItem.getId() == -1 || todoItem.getId() == 0) {
 			todoItem.setId(++counter);
 		}
 		toDos.add(todoItem);
