@@ -2,9 +2,11 @@ package com.gelrestwebservices.restfulwebservices.crudOperations;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
+//import java.util.Iterator;
 //import java.util.Iterator;
 import java.util.List;
+
+import javax.validation.Valid;
 
 import org.springframework.stereotype.Service;
 
@@ -14,7 +16,7 @@ import com.gelrestwebservices.restfulwebservices.user.User;
 public class TodoHardCodedService {
 
 	private static List<ToDo> toDos = new ArrayList<>();
-	private static int counter = 0;
+	private static long counter = 0;
 
 	static {
 		toDos.add(new ToDo(++counter, "Adam needs apple", new Date(), true));
@@ -30,11 +32,11 @@ public class TodoHardCodedService {
 	// public user deleteById(int id)
 	public ToDo deleteById(long id) {
 		ToDo todos = findById(id);
-		if(todos==null) {
+		if (todos == null) {
 			return null;
 		}
-		
-		if(toDos.remove(todos)) {
+
+		if (toDos.remove(todos)) {
 			return todos;
 		}
 		return null;
@@ -42,12 +44,21 @@ public class TodoHardCodedService {
 
 	public ToDo findById(long id) {
 		// TODO Auto-generated method stub
-		for(ToDo todo:toDos) {
-			if(todo.getId()==id) {
+		for (ToDo todo : toDos) {
+			if (todo.getId() == id) {
 				return todo;
 			}
 		}
 		return null;
+	}
+
+	// public User save(User user)
+	public ToDo save(@Valid ToDo todoItem) {
+		if (todoItem.getId() == 0) {
+			todoItem.setId(++counter);
+		}
+		toDos.add(todoItem);
+		return todoItem;
 	}
 
 }
