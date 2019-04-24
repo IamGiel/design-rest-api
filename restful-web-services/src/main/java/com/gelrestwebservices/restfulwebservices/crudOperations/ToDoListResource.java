@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -61,7 +62,22 @@ public class ToDoListResource {
 
 	}
 
-	// post
+	// PUT
+	@PutMapping("/users/{user}/todo{id}")
+	public ResponseEntity<Void> updateTodoList(@Valid @RequestBody ToDo todoItem, @PathVariable long id, @PathVariable String user) {
+
+		ToDo toDo = TodoService.save(todoItem);
+		// CREATED 201 SUCCESS
+		// /user/4
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDo.getId())
+				.toUri();
+
+		// static method
+		return ResponseEntity.created(location).build();
+
+	}
+
+	// POST
 	@PostMapping("/users/{user}/todo")
 	public ResponseEntity<Void> addTodoList(@Valid @RequestBody ToDo todoItem) {
 
@@ -70,7 +86,7 @@ public class ToDoListResource {
 		// /user/4
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDo.getId())
 				.toUri();
-		
+
 		// static method
 		return ResponseEntity.created(location).build();
 
