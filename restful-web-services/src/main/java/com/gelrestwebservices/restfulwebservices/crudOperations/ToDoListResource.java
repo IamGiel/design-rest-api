@@ -47,21 +47,33 @@ public class ToDoListResource {
 		// return userRepository.findAll();
 		return TodoService.findAll();
 	}
+
 	// delete
 	@DeleteMapping("/users/{user}/todo/{id}")
 	public ResponseEntity<Void> deleteTodoById(@PathVariable long id) {
-		
+
 		ToDo toDo = TodoService.deleteById(id);
-		if(toDo != null) {
+		if (toDo != null) {
 			return ResponseEntity.noContent().build();
 		}
-		
+
 		return ResponseEntity.notFound().build();
 
 	}
-	
-	
 
-	
+	// post
+	@PostMapping("/users/{user}/todo")
+	public ResponseEntity<Void> addTodoList(@Valid @RequestBody ToDo todoItem) {
+
+		ToDo toDo = TodoService.save(todoItem);
+		// CREATED 201 SUCCESS
+		// /user/4
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDo.getId())
+				.toUri();
+		
+		// static method
+		return ResponseEntity.created(location).build();
+
+	}
 
 }

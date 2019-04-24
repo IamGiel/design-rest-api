@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Future;
+import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
@@ -34,7 +36,7 @@ public class ToDo {
 	@ApiModelProperty(notes = "Minimum 3 characters")
 	private String description;
 
-	@Past
+	@Future
 	@ApiModelProperty(notes = "Set date should not be in the past")
 	private Date setDate;
 
@@ -44,8 +46,8 @@ public class ToDo {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(long counter) {
+		this.id = counter;
 	}
 
 	public String getDescription() {
@@ -73,7 +75,7 @@ public class ToDo {
 	}
 
 	public ToDo(long counter, @Size(min = 3, message = "Name Should be atleast 3 length") String description,
-			@Past Date setDate, Boolean isDone) {
+			@Future Date setDate, Boolean isDone) {
 		super();
 		this.id = counter;
 		this.description = description;
