@@ -49,6 +49,13 @@ public class ToDoListResource {
 		return TodoService.findAll();
 	}
 
+	// GET /single-todo
+	@GetMapping("/users/{user}/todo/{id}")
+	public ToDo getSingleToDoItem(@PathVariable long id) {
+		ToDo toDo =  TodoService.findById(id);
+		return toDo;
+	}
+
 	// delete
 	@DeleteMapping("/users/{user}/todo/{id}")
 	public ResponseEntity<Void> deleteTodoById(@PathVariable long id) {
@@ -64,13 +71,14 @@ public class ToDoListResource {
 
 	// PUT
 	@PutMapping("/users/{user}/todo{id}")
-	public ResponseEntity<Void> updateTodoList(@Valid @RequestBody ToDo todoItem, @PathVariable long id, @PathVariable String user) {
+	public ResponseEntity<Void> updateTodoList(@Valid @RequestBody ToDo todoItem, @PathVariable long id,
+			@PathVariable String user) {
 
-		ToDo toDo = TodoService.save(todoItem);
+		ToDo toDoUpdated = TodoService.save(todoItem);
 		// CREATED 201 SUCCESS
 		// /user/4
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDo.getId())
-				.toUri();
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+				.buildAndExpand(toDoUpdated.getId()).toUri();
 
 		// static method
 		return ResponseEntity.created(location).build();

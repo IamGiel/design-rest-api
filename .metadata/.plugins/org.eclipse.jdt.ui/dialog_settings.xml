@@ -32,6 +32,13 @@
 	<section name="OptionalMessageDialog.hide.">
 		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
 	</section>
+	<section name="DialogBounds_GenerateHashCodeEqualsDialog">
+		<item value="499" key="DIALOG_WIDTH"/>
+		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
+		<item value="508" key="DIALOG_HEIGHT"/>
+		<item value="711" key="DIALOG_X_ORIGIN"/>
+		<item value="202" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="SourceActionDialog.constructors">
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="false" key="Comments"/>
@@ -59,7 +66,7 @@
 			<item value="912" key="DIALOG_WIDTH"/>
 			<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 			<item value="500" key="DIALOG_HEIGHT"/>
-			<item value="660" key="DIALOG_X_ORIGIN"/>
+			<item value="528" key="DIALOG_X_ORIGIN"/>
 			<item value="207" key="DIALOG_Y_ORIGIN"/>
 		</section>
 	</section>
@@ -77,8 +84,10 @@
 	<section name="SourceActionDialog.methods">
 		<item value="true" key="IgnoreDefault"/>
 		<item value="false" key="SynchronizedModifier"/>
+		<item value="false" key="Blocks"/>
 		<item value="false" key="Comments"/>
 		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="InstanceOf"/>
 		<item value="0" key="StringStyle"/>
 		<item value="0" key="ToStringTemplateSelected"/>
 		<item value="false" key="LimitElements"/>
