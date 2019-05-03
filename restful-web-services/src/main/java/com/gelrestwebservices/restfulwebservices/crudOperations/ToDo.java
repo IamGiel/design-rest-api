@@ -42,6 +42,9 @@ public class ToDo {
 
 	private Boolean isDone;
 
+	// JPA expects a default constructor
+//	 protected ToDo() {}
+
 	public Long getId() {
 		return id;
 	}
@@ -88,6 +91,7 @@ public class ToDo {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		System.out.println("this is RESULT of HASHCODE >>>> " + result);
 		return result;
 	}
 
@@ -107,8 +111,5 @@ public class ToDo {
 			return false;
 		return true;
 	}
-	
-	
-	
 
 }

@@ -6,6 +6,7 @@ import java.util.Date;
 //import java.util.Iterator;
 import java.util.List;
 
+import javax.persistence.Id;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Service;
@@ -53,24 +54,28 @@ public class TodoHardCodedService {
 	}
 
 	// update
-	public ToDo update(ToDo todoItem) {
-		if (todoItem.getId() == -1) {
+	public ToDo update(@Valid ToDo todoItem) {
+		if (todoItem.getId() == -1 || todoItem.getId() == 0) {
+			deleteById(todoItem.getId());
 			todoItem.setId(++counter);
 			toDos.add(todoItem);
 		} else {
 			deleteById(todoItem.getId());
 			toDos.add(todoItem);
 		}
-		toDos.add(todoItem);
 		return todoItem;
+		
 	}
 
 	// save
 	public ToDo save(@Valid ToDo todoItem) {
 		if (todoItem.getId() == -1 || todoItem.getId() == 0) {
 			todoItem.setId(++counter);
+			toDos.add(todoItem);
+		} else {
+			deleteById(todoItem.getId());
+			toDos.add(todoItem);
 		}
-		toDos.add(todoItem);
 		return todoItem;
 	}
 
