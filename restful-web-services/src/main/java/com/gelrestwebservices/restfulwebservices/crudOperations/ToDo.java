@@ -36,8 +36,8 @@ public class ToDo {
 	@ApiModelProperty(notes = "Minimum 3 characters")
 	private String description;
 
-	@Future
-	@ApiModelProperty(notes = "Set date should not be in the past")
+	// @Future
+	// @ApiModelProperty(notes = "Set date should not be in the past")
 	private Date setDate;
 
 	private Boolean isDone;
@@ -62,10 +62,12 @@ public class ToDo {
 	}
 
 	public Date getSetDate() {
+		System.out.println("TESTING DATE >>>>> " + setDate);
 		return setDate;
 	}
 
 	public void setSetDate(Date setDate) {
+		System.out.println("TESTING DATE >>>>> " + setDate);
 		this.setDate = setDate;
 	}
 
@@ -78,7 +80,7 @@ public class ToDo {
 	}
 
 	public ToDo(long counter, @Size(min = 3, message = "Name Should be atleast 3 length") String description,
-			@Future Date setDate, Boolean isDone) {
+			 Date setDate, Boolean isDone) {
 		super();
 		this.id = counter;
 		this.description = description;
