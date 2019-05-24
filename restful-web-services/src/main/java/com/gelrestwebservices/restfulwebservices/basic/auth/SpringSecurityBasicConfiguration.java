@@ -16,7 +16,7 @@ public class SpringSecurityBasicConfiguration extends WebSecurityConfigurerAdapt
 	private final Log logger = LogFactory.getLog(WebSecurityConfigurerAdapter.class);
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		logger.debug("Using default configure(HttpSecurity). If subclassed this will potentially override subclass configure(HttpSecurity).");
+		logger.debug(" >>>>>>>>> Using default configure(HttpSecurity). If subclassed this will potentially override subclass configure(HttpSecurity).");
 		http
 		.csrf().disable() // use JWT 
 		.authorizeRequests()
