@@ -62,6 +62,7 @@ public class JwtAuthenticationRestController {
 		String authToken = request.getHeader(tokenHeader);
 		final String token = authToken.substring(7);
 		String username = jwtTokenUtil.getUsernameFromToken(token);
+		@SuppressWarnings("unused")
 		JwtUserDetails user = (JwtUserDetails) jwtInMemoryUserDetailsService.loadUserByUsername(username);
 
 		if (jwtTokenUtil.canTokenBeRefreshed(token)) {
