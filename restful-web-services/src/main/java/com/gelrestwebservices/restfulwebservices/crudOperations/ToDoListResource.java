@@ -1,17 +1,11 @@
 package com.gelrestwebservices.restfulwebservices.crudOperations;
 
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.*;
 import java.net.URI;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Optional;
 
 import javax.validation.Valid;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.Resource;
-import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -24,11 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import com.gelrestwebservices.restfulwebservices.post.Post;
-import com.gelrestwebservices.restfulwebservices.post.PostRepository;
-import com.gelrestwebservices.restfulwebservices.user.User;
-import com.gelrestwebservices.restfulwebservices.user.UserNotFoundException;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController

@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gelrestwebservices.rest.basic.auth.AuthenticationBean;
+
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class BasicAuthController {
