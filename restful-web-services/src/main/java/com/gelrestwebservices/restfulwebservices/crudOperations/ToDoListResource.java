@@ -35,7 +35,7 @@ public class ToDoListResource {
 	// GET /all-todos
 	// retrieveAllTodos
 	@GetMapping("/users/{user}/all-todos")
-	public List<ToDo> retrieveAllTodos(String username) {
+	public List<toDo> retrieveAllTodos(String username) {
 		// return service.findAll();
 		// return userRepository.findAll();
 		return TodoService.findAll();
@@ -43,8 +43,8 @@ public class ToDoListResource {
 
 	// GET /single-todo
 	@GetMapping("/users/{user}/todo/{id}")
-	public ToDo getSingleToDoItem(@PathVariable long id) {
-		ToDo toDo = TodoService.findById(id);
+	public toDo getSingleToDoItem(@PathVariable long id) {
+		toDo toDo = TodoService.findById(id);
 		return toDo;
 	}
 
@@ -52,7 +52,7 @@ public class ToDoListResource {
 	@DeleteMapping("/users/{user}/todo/{id}")
 	public ResponseEntity<Void> deleteTodoById(@PathVariable long id) {
 
-		ToDo toDo = TodoService.deleteById(id);
+		toDo toDo = TodoService.deleteById(id);
 		if (toDo != null) {
 			return ResponseEntity.noContent().build();
 		}
@@ -63,10 +63,10 @@ public class ToDoListResource {
 
 	// PUT
 	@PutMapping("/users/{user}/todo/{id}")
-	public ResponseEntity<ToDo> updateTodoList(@Valid @RequestBody ToDo todoItem, @PathVariable long id,
+	public ResponseEntity<toDo> updateTodoList(@Valid @RequestBody toDo todoItem, @PathVariable long id,
 			@PathVariable String user) {
 
-		ToDo toDoUpdated = TodoService.save(todoItem);
+		toDo toDoUpdated = TodoService.save(todoItem);
 		
 //		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDoUpdated.getId())
 //				.toUri();
@@ -76,15 +76,15 @@ public class ToDoListResource {
 		
 
 		// static method
-		return new ResponseEntity<ToDo>(toDoUpdated, HttpStatus.OK);
+		return new ResponseEntity<toDo>(toDoUpdated, HttpStatus.OK);
 
 	}
 
 	// POST
 	@PostMapping("/users/{user}/todo")
-	public ResponseEntity<Void> addTodoList(@Valid @RequestBody ToDo todoItem) {
+	public ResponseEntity<Void> addTodoList(@Valid @RequestBody toDo todoItem) {
 
-		ToDo toDo = TodoService.save(todoItem);
+		toDo toDo = TodoService.save(todoItem);
 		// CREATED 201 SUCCESS
 		// /user/4
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDo.getId())
