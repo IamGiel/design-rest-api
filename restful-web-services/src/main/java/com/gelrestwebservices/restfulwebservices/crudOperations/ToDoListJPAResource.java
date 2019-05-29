@@ -2,6 +2,7 @@ package com.gelrestwebservices.restfulwebservices.crudOperations;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -19,54 +20,40 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
-public class ToDoListResource {
-
-	public void addCorsMappings(CorsRegistry registry) {
-		registry.addMapping("/users/**").allowedOrigins("http://localhost:4200", "http://localhost:9191");
-	}
-
-//	@Autowired
-//	private  PostRepository  postRepository;
+public class ToDoListJPAResource {
+	
 	@Autowired
-	private TodoHardCodedService TodoService;
+	private toDoJPARepository jpaTodoRepository;
 
 	// GET /all-todos
-	// retrieveAllTodos
-	@GetMapping("/users/{user}/all-todos")
+	@GetMapping("/jpa/users/{user}/all-todos")
 	public List<toDo> retrieveAllTodos(String username) {
 		// return service.findAll();
 		// return userRepository.findAll();
-		return TodoService.findAll();
+		return jpaTodoRepository.findByUsername(username);
 	}
 
 	// GET /single-todo
-	@GetMapping("/users/{user}/todo/{id}")
+	@GetMapping("/jpa/users/{user}/todo/{id}")
 	public toDo getSingleToDoItem(@PathVariable long id) {
-		toDo toDo = TodoService.findById(id);
+		toDo toDo = jpaTodoRepository.findById(id).get();
 		return toDo;
 	}
 
 	// delete
-	@DeleteMapping("/users/{user}/todo/{id}")
-	public ResponseEntity<Void> deleteTodoById(@PathVariable long id) {
-
-		toDo toDo = TodoService.deleteById(id);
-		if (toDo != null) {
-			return ResponseEntity.noContent().build();
-		}
-
-		return ResponseEntity.notFound().build();
-
+	@DeleteMapping("/jpa/users/{user}/todo/{id}")
+	public void deleteTodoById(@PathVariable long id) {
+		jpaTodoRepository.deleteById(id);
 	}
 
 	// PUT
-	@PutMapping("/users/{user}/todo/{id}")
+	@PutMapping("/jpa/users/{user}/todo/{id}")
 	public ResponseEntity<toDo> updateTodoList(@Valid @RequestBody toDo todoItem, @PathVariable long id,
 			@PathVariable String user) {
 
-		toDo toDoUpdated = TodoService.save(todoItem);
+		toDo toDoUpdated = jpaTodoRepository.save(todoItem);
 		
 //		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDoUpdated.getId())
 //				.toUri();
@@ -81,10 +68,10 @@ public class ToDoListResource {
 	}
 
 	// POST
-	@PostMapping("/users/{user}/todo")
+	@PostMapping("/jpa/users/{user}/todo")
 	public ResponseEntity<Void> addTodoList(@Valid @RequestBody toDo todoItem) {
 
-		toDo toDo = TodoService.save(todoItem);
+		toDo toDo = jpaTodoRepository.save(todoItem);
 		// CREATED 201 SUCCESS
 		// /user/4
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDo.getId())

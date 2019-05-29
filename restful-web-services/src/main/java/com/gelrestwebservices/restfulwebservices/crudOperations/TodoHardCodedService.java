@@ -16,23 +16,23 @@ import com.gelrestwebservices.restfulwebservices.user.User;
 @Service
 public class TodoHardCodedService {
 
-	private static List<ToDo> toDos = new ArrayList<>();
+	private static List<toDo> toDos = new ArrayList<>();
 	private static long counter = 0;
 
 	static {
-		toDos.add(new ToDo(++counter, "Adam needs apple", new Date(), true));
-		toDos.add(new ToDo(++counter, "Get some stuff in walmart", new Date(), true));
-		toDos.add(new ToDo(++counter, "New NorthFace Sweater needed", new Date(), true));
+		toDos.add(new toDo(++counter, "Adam needs apple", new Date(), "Adam", true));
+		toDos.add(new toDo(++counter, "Get some stuff in walmart", new Date(), "Adam", true));
+		toDos.add(new toDo(++counter, "New NorthFace Sweater needed", new Date(), "Adam",  true));
 	}
 
 	// public List<User> findAll()
-	public List<ToDo> findAll() {
+	public List<toDo> findAll() {
 		return toDos;
 	}
 
 	// public user deleteById(int id)
-	public ToDo deleteById(long id) {
-		ToDo todos = findById(id);
+	public toDo deleteById(long id) {
+		toDo todos = findById(id);
 		if (todos == null) {
 			return null;
 		}
@@ -43,9 +43,9 @@ public class TodoHardCodedService {
 		return null;
 	}
 
-	public ToDo findById(long id) {
+	public toDo findById(long id) {
 		// TODO Auto-generated method stub
-		for (ToDo todo : toDos) {
+		for (toDo todo : toDos) {
 			if (todo.getId() == id) {
 				return todo;
 			}
@@ -54,7 +54,7 @@ public class TodoHardCodedService {
 	}
 
 	// update
-	public ToDo update(@Valid ToDo todoItem) {
+	public toDo update(@Valid toDo todoItem) {
 		if (todoItem.getId() == -1 || todoItem.getId() == 0) {
 			deleteById(todoItem.getId());
 			todoItem.setId(++counter);
@@ -68,7 +68,7 @@ public class TodoHardCodedService {
 	}
 
 	// save
-	public ToDo save(@Valid ToDo todoItem) {
+	public toDo save(@Valid toDo todoItem) {
 		if (todoItem.getId() == -1 || todoItem.getId() == 0) {
 			todoItem.setId(++counter);
 			toDos.add(todoItem);
