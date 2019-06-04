@@ -1,67 +1,63 @@
-package com.gelrestwebservices.restfulwebservices.post;
+// package com.gelrestwebservices.restfulwebservices.post;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+// import javax.persistence.Entity;
+// import javax.persistence.FetchType;
+// import javax.persistence.GeneratedValue;
+// import javax.persistence.Id;
+// import javax.persistence.ManyToOne;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.gelrestwebservices.restfulwebservices.user.User;
+// import com.fasterxml.jackson.annotation.JsonBackReference;
+// import com.gelrestwebservices.restfulwebservices.user.User;
 
-@Entity
-public class Post {
-	
-	@Id
-	@GeneratedValue
-	private Integer id;
-	private String description;
-	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JsonBackReference
-	private User user;
-	
-	protected Post() {
-		
-	}
-	public Post(Integer id, String description, User user) {
-		super();
-		this.id = id;
-		this.description = description;
-		this.user = user;
-	}
+// @Entity
+// public class Post {
 
-	public Integer getId() {
-		return id;
-	}
+// @Id
+// @GeneratedValue
+// private Integer id;
+// private String description;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+// @ManyToOne(fetch=FetchType.LAZY)
+// @JsonBackReference
+// private User user;
 
-	public String getDescription() {
-		return description;
-	}
+// protected Post() {
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+// }
+// public Post(Integer id, String description, User user) {
+// super();
+// this.id = id;
+// this.description = description;
+// this.user = user;
+// }
 
-	public User getUser() {
-		return user;
-	}
+// public Integer getId() {
+// return id;
+// }
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+// public void setId(Integer id) {
+// this.id = id;
+// }
 
-	@Override
-	public String toString() {
-		return "Post [id=" + id + ", description=" + description + "]";
-	}
-	
-	
-	
-	
-	
-}
+// public String getDescription() {
+// return description;
+// }
+
+// public void setDescription(String description) {
+// this.description = description;
+// }
+
+// public User getUser() {
+// return user;
+// }
+
+// public void setUser(User user) {
+// this.user = user;
+// }
+
+// @Override
+// public String toString() {
+// return "Post [id=" + id + ", description=" + description + "]";
+// }
+
+// }

@@ -41,7 +41,7 @@ public class BasicAuthController {
 
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println(e);
+			System.out.println("what is e >>> " + e);
 		}
 		
 		// return new AuthenticationBean("new auth bean ");
