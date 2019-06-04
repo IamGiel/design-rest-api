@@ -3,9 +3,19 @@
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/alpha.gieldeasis/Desktop/oldJavaAng"/>
+			<item value="/Users/alpha.gieldeasis/Desktop/oldJavaAng/restful-web-services"/>
 			<item value="/Users/alpha.gieldeasis/Desktop/datacleanseraleigh"/>
 			<item value="/Users/alpha.gieldeasis/Desktop/rest/jpa-in-10-steps"/>
 			<item value="/Users/alpha.gieldeasis/Desktop/src/gel-springboot-basics"/>

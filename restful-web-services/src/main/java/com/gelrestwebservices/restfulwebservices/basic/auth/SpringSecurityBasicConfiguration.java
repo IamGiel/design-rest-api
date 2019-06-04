@@ -25,5 +25,9 @@ public class SpringSecurityBasicConfiguration extends WebSecurityConfigurerAdapt
 			.and()
 		// .formLogin().and()
 		.httpBasic();
+		
+		http.headers().frameOptions().sameOrigin();
 	}
+	
+	
 }
