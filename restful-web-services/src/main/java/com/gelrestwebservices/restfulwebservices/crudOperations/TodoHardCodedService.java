@@ -6,12 +6,10 @@ import java.util.Date;
 //import java.util.Iterator;
 import java.util.List;
 
-import javax.persistence.Id;
+// import javax.persistence.Id;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Service;
-
-import com.gelrestwebservices.restfulwebservices.user.User;
 
 @Service
 public class TodoHardCodedService {
@@ -22,7 +20,7 @@ public class TodoHardCodedService {
 	static {
 		toDos.add(new toDo(++counter, "Adam needs apple", new Date(), "Adam", true));
 		toDos.add(new toDo(++counter, "Get some stuff in walmart", new Date(), "Adam", true));
-		toDos.add(new toDo(++counter, "New NorthFace Sweater needed", new Date(), "Adam",  true));
+		toDos.add(new toDo(++counter, "New NorthFace Sweater needed", new Date(), "Adam", true));
 	}
 
 	// public List<User> findAll()
@@ -64,7 +62,7 @@ public class TodoHardCodedService {
 			toDos.add(todoItem);
 		}
 		return todoItem;
-		
+
 	}
 
 	// save

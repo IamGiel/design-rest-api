@@ -1,9 +1,9 @@
-package com.gelrestwebservices.restfulwebservices.post;
+// package com.gelrestwebservices.restfulwebservices.post;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+// import org.springframework.data.jpa.repository.JpaRepository;
+// import org.springframework.stereotype.Repository;
 
-@Repository
-public interface PostRepository extends JpaRepository<Post, Integer> {
-	
-}
+// @Repository
+// public interface PostRepository extends JpaRepository<Post, Integer> {
+
+// }

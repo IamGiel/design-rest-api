@@ -2,8 +2,6 @@ package com.gelrestwebservices.restfulwebservices.crudOperations;
 
 import java.net.URI;
 import java.util.List;
-import java.util.Optional;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,50 +15,48 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @CrossOrigin(origins = "*")
 @RestController
 public class ToDoListJPAResource {
-	
+
 	@Autowired
-	private toDoJPARepository jpaTodoRepository;
+	private ToDoJpaRepository jpaTodoRepository;
 
 	// GET /all-todos
-	@GetMapping("/jpa/users/{user}/all-todos")
+	@GetMapping("/sql/users/{user}/all-todos")
 	public List<toDo> retrieveAllTodos(String username) {
-		// return service.findAll();
-		// return userRepository.findAll();
-		return jpaTodoRepository.findByUsername(username);
+		return (List<toDo>) jpaTodoRepository.findByUsername(username);
 	}
+	// @GetMapping("/sql/users/{user}/all-todos")
+	// public List<toDo> retrieveAllTodos(String username) {
+	// return jpaTodoRepository.findByUsername(username);
+	// }
 
 	// GET /single-todo
-	@GetMapping("/jpa/users/{user}/todo/{id}")
-	public toDo getSingleToDoItem(@PathVariable long id) {
-		toDo toDo = jpaTodoRepository.findById(id).get();
-		return toDo;
+	@GetMapping("/sql/users/{user}/todo/{id}")
+	public toDo getSingleToDoItem(@PathVariable Long id) {
+		return jpaTodoRepository.findById(id).get();
 	}
 
 	// delete
-	@DeleteMapping("/jpa/users/{user}/todo/{id}")
-	public void deleteTodoById(@PathVariable long id) {
+	@DeleteMapping("/sql/users/{user}/todo/{id}")
+	public ResponseEntity<Void> deleteTodoById(@PathVariable Long id) {
+
 		jpaTodoRepository.deleteById(id);
+
+		return ResponseEntity.noContent().build();
+		// return ResponseEntity.notFound().build();
+
 	}
 
 	// PUT
-	@PutMapping("/jpa/users/{user}/todo/{id}")
-	public ResponseEntity<toDo> updateTodoList(@Valid @RequestBody toDo todoItem, @PathVariable long id,
+	@PutMapping("/sql/users/{user}/todo/{id}")
+	public ResponseEntity<toDo> updateTodoList(@Valid @RequestBody toDo todoItem, @PathVariable Long id,
 			@PathVariable String user) {
 
 		toDo toDoUpdated = jpaTodoRepository.save(todoItem);
-		
-//		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDoUpdated.getId())
-//				.toUri();
-//
-//		// static method
-//		return ResponseEntity.created(location).build();
-		
 
 		// static method
 		return new ResponseEntity<toDo>(toDoUpdated, HttpStatus.OK);
@@ -68,9 +64,9 @@ public class ToDoListJPAResource {
 	}
 
 	// POST
-	@PostMapping("/jpa/users/{user}/todo")
-	public ResponseEntity<Void> addTodoList(@Valid @RequestBody toDo todoItem) {
-
+	@PostMapping("/sql/users/{user}/todo")
+	public ResponseEntity<Void> addTodoList(@PathVariable String user, @Valid @RequestBody toDo todoItem) {
+		todoItem.setUsername(user);
 		toDo toDo = jpaTodoRepository.save(todoItem);
 		// CREATED 201 SUCCESS
 		// /user/4

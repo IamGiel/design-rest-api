@@ -27,8 +27,8 @@ public class ToDoListResource {
 		registry.addMapping("/users/**").allowedOrigins("http://localhost:4200", "http://localhost:9191");
 	}
 
-//	@Autowired
-//	private  PostRepository  postRepository;
+	// @Autowired
+	// private PostRepository postRepository;
 	@Autowired
 	private TodoHardCodedService TodoService;
 
@@ -67,13 +67,13 @@ public class ToDoListResource {
 			@PathVariable String user) {
 
 		toDo toDoUpdated = TodoService.save(todoItem);
-		
-//		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDoUpdated.getId())
-//				.toUri();
-//
-//		// static method
-//		return ResponseEntity.created(location).build();
-		
+
+		// URI location =
+		// ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(toDoUpdated.getId())
+		// .toUri();
+		//
+		// // static method
+		// return ResponseEntity.created(location).build();
 
 		// static method
 		return new ResponseEntity<toDo>(toDoUpdated, HttpStatus.OK);

@@ -1,16 +1,16 @@
 package com.gelrestwebservices.restfulwebservices.crudOperations;
 
 import java.util.Date;
+
+import javax.validation.constraints.Size;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//import javax.persistence.ManyToOne;
-//import javax.persistence.OneToMany;
-//import javax.persistence.Table;
-//import javax.validation.constraints.Future;
-//import javax.validation.constraints.FutureOrPresent;
-//import javax.validation.constraints.Past;
-import javax.validation.constraints.Size;
+import javax.persistence.Table;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+// import org.springframework.data.annotation.Id;
 
 //import org.aspectj.weaver.ast.Var;
 //import org.omg.CORBA.PRIVATE_MEMBER;
@@ -44,8 +44,6 @@ public class toDo {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-
 
 	public String getUsername() {
 		return username;
